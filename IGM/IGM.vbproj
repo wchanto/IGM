@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{154BCC63-323B-4AA9-851F-1374F6AFDF45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>IGM.My.MyApplication</StartupObject>
+    <RootNamespace>IGM</RootNamespace>
+    <AssemblyName>IGM</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://www.igmsa.com</SupportUrl>
+    <ErrorReportUrl>http://www.igmsa.com</ErrorReportUrl>
+    <ProductName>IGM</ProductName>
+    <PublisherName>IGM</PublisherName>
+    <SuiteName>IGM-Sistemas</SuiteName>
+    <ApplicationRevision>51</ApplicationRevision>
+    <ApplicationVersion>1.0.0.51</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IGM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>IGM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>igm.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6D68C6321D19A8256519468B171D64584C10BCE5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>IGM_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReport2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHEmpleado.Designer.vb">
+      <DependentUpon>frm_RHEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\RRHH\rpt_RHTipoPlanilla.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_RHTipoPlanilla.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHTiposDeduccion.Designer.vb">
+      <DependentUpon>frm_RHTiposDeduccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHTiposDeduccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHTiposPlanilla.Designer.vb">
+      <DependentUpon>frm_RHTiposPlanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHTiposPlanilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\RRHH\rpt_RHTiposDeduccion.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_RHTiposDeduccion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\RRHH\rpt_RHTiposPago.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_RHTiposPago.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHTiposPago.Designer.vb">
+      <DependentUpon>frm_RHTiposPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHTiposPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\RRHH\rpt_RHCargos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_RHCargos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHCargos.Designer.vb">
+      <DependentUpon>frm_RHCargos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHCargos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHPuestos.Designer.vb">
+      <DependentUpon>frm_RHPuestos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\RRHH\frm_RHPuestos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\RRHH\rpt_RHPuestos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_RHPuestos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Sistema\rpt_Departamentos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_Departamentos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_CentroTrabajo.Designer.vb">
+      <DependentUpon>frm_CentroTrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_CentroTrabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_Departamentos.Designer.vb">
+      <DependentUpon>frm_Departamentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_Departamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\frm_PLSAreas.Designer.vb">
+      <DependentUpon>frm_PLSAreas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\frm_PLSAreas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\frm_PLSRegTramite.Designer.vb">
+      <DependentUpon>frm_PLSRegTramite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\frm_PLSRegTramite.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\frm_PLSRegTramite3.Designer.vb">
+      <DependentUpon>frm_PLSRegTramite3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\frm_PLSRegTramite3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_SEGAcceso.Designer.vb">
+      <DependentUpon>frm_SEGAcceso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_SEGAcceso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\frm_PLSRegTramite2.Designer.vb">
+      <DependentUpon>frm_PLSRegTramite2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\frm_PLSRegTramite2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Sistema\rpt_CentroTrabajo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_CentroTrabajo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\rpt_PLSTipoTramite.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_PLSTipoTramite.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\rpt_PLS_Requisitos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_PLS_Requisitos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FIN_Objetos.vb" />
+    <Compile Include="Resources\PlataformaServicios\frm_PLSRequisitos.Designer.vb">
+      <DependentUpon>frm_PLSRequisitos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\frm_PLSRequisitos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\Frm_PLSTipoTramite.Designer.vb">
+      <DependentUpon>Frm_PLSTipoTramite.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PlataformaServicios\Frm_PLSTipoTramite.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Financiero\frm_FINAsiento.Designer.vb">
+      <DependentUpon>frm_FINAsiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Financiero\frm_FINAsiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Financiero\frm_FINRegAsiento.Designer.vb">
+      <DependentUpon>frm_FINRegAsiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Financiero\frm_FINRegAsiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_REP.Designer.vb">
+      <DependentUpon>frm_REP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_REP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Seguridad\rpt_Usuarios.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_Usuarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Sistema\frm_Conexion.designer.vb">
+      <DependentUpon>frm_Conexion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Sistema\frm_Conexion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Financiero\frm_FINCtasContables.Designer.vb">
+      <DependentUpon>frm_FINCtasContables.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Financiero\frm_FINCtasContables.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_Intro.Designer.vb">
+      <DependentUpon>frm_Intro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_Intro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_Menu.Designer.vb">
+      <DependentUpon>frm_Menu.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_Report.Designer.vb">
+      <DependentUpon>frm_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_Usuarios.Designer.vb">
+      <DependentUpon>frm_Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Seguridad\frm_Usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IGMDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IGMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IGMDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IGMDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resources\Tributario\frm_TRContrib.Designer.vb">
+      <DependentUpon>frm_TRContrib.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Tributario\frm_TRContrib.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Tributario\TRB_TiposCampo.Designer.vb">
+      <DependentUpon>TRB_TiposCampo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Tributario\TRB_TiposCampo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VariablesGlobales.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RRHH\frm_RHEmpleado.resx">
+      <DependentUpon>frm_RHEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RRHH\rpt_RHTipoPlanilla.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_RHTipoPlanilla.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RRHH\frm_RHTiposDeduccion.resx">
+      <DependentUpon>frm_RHTiposDeduccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RRHH\frm_RHTiposPlanilla.resx">
+      <DependentUpon>frm_RHTiposPlanilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RRHH\rpt_RHTiposDeduccion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_RHTiposDeduccion.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RRHH\rpt_RHTiposPago.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_RHTiposPago.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RRHH\frm_RHTiposPago.resx">
+      <DependentUpon>frm_RHTiposPago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RRHH\rpt_RHCargos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_RHCargos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RRHH\frm_RHCargos.resx">
+      <DependentUpon>frm_RHCargos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RRHH\frm_RHPuestos.resx">
+      <DependentUpon>frm_RHPuestos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RRHH\rpt_RHPuestos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_RHPuestos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Sistema\rpt_Departamentos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_Departamentos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Seguridad\frm_CentroTrabajo.resx">
+      <DependentUpon>frm_CentroTrabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Seguridad\frm_Departamentos.resx">
+      <DependentUpon>frm_Departamentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlataformaServicios\frm_PLSAreas.resx">
+      <DependentUpon>frm_PLSAreas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlataformaServicios\frm_PLSRegTramite.resx">
+      <DependentUpon>frm_PLSRegTramite.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlataformaServicios\frm_PLSRegTramite2.resx">
+      <DependentUpon>frm_PLSRegTramite2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlataformaServicios\frm_PLSRegTramite3.resx">
+      <DependentUpon>frm_PLSRegTramite3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Seguridad\frm_SEGAcceso.resx">
+      <DependentUpon>frm_SEGAcceso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Sistema\rpt_CentroTrabajo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_CentroTrabajo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlataformaServicios\rpt_PLSTipoTramite.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_PLSTipoTramite.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlataformaServicios\rpt_PLS_Requisitos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_PLS_Requisitos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlataformaServicios\frm_PLSRequisitos.resx">
+      <DependentUpon>frm_PLSRequisitos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PlataformaServicios\Frm_PLSTipoTramite.resx">
+      <DependentUpon>Frm_PLSTipoTramite.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Financiero\frm_FINAsiento.resx">
+      <DependentUpon>frm_FINAsiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Financiero\frm_FINRegAsiento.resx">
+      <DependentUpon>frm_FINRegAsiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Seguridad\frm_REP.resx">
+      <DependentUpon>frm_REP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Seguridad\rpt_Usuarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_Usuarios.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIN_CatCuentas.rdlc" />
+    <EmbeddedResource Include="Resources\Sistema\frm_Conexion.resx">
+      <DependentUpon>frm_Conexion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Financiero\frm_FINCtasContables.resx">
+      <DependentUpon>frm_FINCtasContables.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Seguridad\frm_Intro.resx">
+      <DependentUpon>frm_Intro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Seguridad\frm_Menu.resx">
+      <DependentUpon>frm_Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Seguridad\frm_Report.resx">
+      <DependentUpon>frm_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Seguridad\frm_Usuarios.resx">
+      <DependentUpon>frm_Usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Tributario\frm_TRContrib.resx">
+      <DependentUpon>frm_TRContrib.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Tributario\TRB_TiposCampo.resx">
+      <DependentUpon>TRB_TiposCampo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_FINCuentas.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IGMDataSet.xsc">
+      <DependentUpon>IGMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IGMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IGMDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IGMDataSet.xss">
+      <DependentUpon>IGMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IGMDataSet1.xsc">
+      <DependentUpon>IGMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="IGMDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IGMDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IGMDataSet1.xss">
+      <DependentUpon>IGMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="IGM_1_TemporaryKey.pfx" />
+    <None Include="IGM_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64_bit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="igm.ico" />
+    <None Include="Resources\table_money1.png" />
+    <None Include="Resources\page_white_magnify.png" />
+    <None Include="Resources\magnifier.png" />
+    <None Include="Resources\finance2.png" />
+    <None Include="Resources\layer_label1.png" />
+    <None Include="Resources\client_account_template4.png" />
+    <None Include="Resources\cog_edit1.png" />
+    <None Include="Resources\group1.png" />
+    <None Include="Resources\index.jpg" />
+    <None Include="Resources\client_account_template2.png" />
+    <None Include="Resources\client_account_template1.png" />
+    <None Include="Resources\info_rhombus.png" />
+    <None Include="Resources\blogs.png" />
+    <None Include="Resources\building_go.png" />
+    <None Include="Resources\database_save.png" />
+    <None Include="Resources\table_save.png" />
+    <None Include="Resources\IGM_small1.png" />
+    <None Include="Resources\layer_label.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\document_view_book.png" />
+    <None Include="Resources\delete1.png" />
+    <None Include="Resources\finance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FlashControlV71">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ShockwaveFlashObjects">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
