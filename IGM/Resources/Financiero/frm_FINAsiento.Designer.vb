@@ -216,7 +216,7 @@ Partial Class frm_FINAsiento
         Me.lbEstado.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lbEstado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbEstado.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbEstado.Location = New System.Drawing.Point(743, 39)
+        Me.lbEstado.Location = New System.Drawing.Point(699, 21)
         Me.lbEstado.Name = "lbEstado"
         Me.lbEstado.Size = New System.Drawing.Size(73, 27)
         Me.lbEstado.TabIndex = 10
