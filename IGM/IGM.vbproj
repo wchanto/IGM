@@ -356,6 +356,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Resources\Tributario\frm_TRGetContribuyente.Designer.vb">
+      <DependentUpon>frm_TRGetContribuyente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Tributario\frm_TRGetContribuyente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Resources\Tributario\frm_TRContrib.Designer.vb">
       <DependentUpon>frm_TRContrib.vb</DependentUpon>
     </Compile>
@@ -497,6 +503,9 @@
     <EmbeddedResource Include="Resources\Tributario\frm_TRContrib.resx">
       <DependentUpon>frm_TRContrib.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Tributario\frm_TRGetContribuyente.resx">
+      <DependentUpon>frm_TRGetContribuyente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Tributario\TRB_TiposCampo.resx">
       <DependentUpon>TRB_TiposCampo.vb</DependentUpon>
     </EmbeddedResource>
@@ -556,6 +565,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="igm.ico" />
+    <None Include="Resources\google_custom_search2.png" />
+    <None Include="Resources\google_custom_search1.png" />
+    <None Include="Resources\google_custom_search.png" />
+    <None Include="Resources\find.png" />
     <None Include="Resources\table_money1.png" />
     <None Include="Resources\page_white_magnify.png" />
     <None Include="Resources\magnifier.png" />

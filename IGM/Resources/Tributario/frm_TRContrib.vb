@@ -1,6 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 
 Public Class frm_TRContrib
+    Public vTRBIDContrib As String
     Public Sub get_campos()
         Conexion.Open()
         Dim dummy As String
@@ -116,7 +117,7 @@ Public Class frm_TRContrib
         End With
 
         '----------------------
-        
+
 
     End Sub
 
@@ -179,7 +180,7 @@ Public Class frm_TRContrib
         End If
     End Sub
 
- 
+
 
     Private Sub DPDefun_ValueChanged(sender As Object, e As EventArgs) Handles DPDefun.ValueChanged
         DPDefun.Format = DateTimePickerFormat.Long
@@ -194,5 +195,37 @@ Public Class frm_TRContrib
 
     Private Sub DPNacimiento_ValueChanged(sender As Object, e As EventArgs) Handles DPNacimiento.ValueChanged
         DPNacimiento.Format = DateTimePickerFormat.Long
+    End Sub
+
+    Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
+        frm_TRGetContribuyente.ShowDialog()
+        txIdentificacion.Text = frm_TRGetContribuyente.DGContrib.Tag
+        frm_TRGetContribuyente.Close()
+        txIdentificacion_Leave(sender, e)
+    End Sub
+
+    Private Sub txIdentificacion_Leave(sender As Object, e As EventArgs) Handles txIdentificacion.Leave
+        Conexion = New SqlClient.SqlConnection(MemConnect)
+        Conexion.Open()
+
+        Dim tmpQry As New SqlClient.SqlCommand
+        Dim leeSQL As SqlClient.SqlDataReader
+
+        tmpQry.Connection = Conexion
+        tmpQry.CommandText = "select top 1 * from TRB_Contribuyentes where identificacion='" & txIdentificacion.Text & "'"
+        leeSQL = tmpQry.ExecuteReader
+        Dim clave As String = ""
+        Do While leeSQL.Read
+            txNombreCompleto.Text = leeSQL.Item("nombre")
+            txNombre.Text = leeSQL.Item("nombrefisico")
+            txApellido1.Text = leeSQL.Item("apellido1")
+            txApellido2.Text = leeSQL.Item("Apellido2")
+        Loop
+        Conexion.Close()
+    End Sub
+
+
+    Private Sub txIdentificacion_TextChanged(sender As Object, e As EventArgs) Handles txIdentificacion.TextChanged
+
     End Sub
 End Class

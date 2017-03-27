@@ -41,27 +41,33 @@
                 Loop
 
                 Conexion.Close()
+                Dim vRequerido As Integer = 0
+                'CBool(DataGridView1.Rows(RowIndex).Cells(ColumnIndex).Value) 
+                If CBool(dgCampos.Rows(a).Cells(4).Value) Then vRequerido = 1
+
                 If es_nuevo Then
                     Conexion.Open()
-                    tmp_qry = "INSERT INTO TRB_TipoCampo (TipoCampo,Descripcion,Largo,Formato) values ("
+                    tmp_qry = "INSERT INTO TRB_TipoCampo (TipoCampo,Descripcion,Largo,Formato,Requerido) values ("
                     tmp_qry = tmp_qry & dgCampos.Rows(a).Cells(0).Value & ",'"
                     tmp_qry = tmp_qry & dgCampos.Rows(a).Cells(1).Value & "',"
                     tmp_qry = tmp_qry & dgCampos.Rows(a).Cells(2).Value & ",'"
-                    tmp_qry = tmp_qry & dgCampos.Rows(a).Cells(3).Value & "')"
+                    tmp_qry = tmp_qry & dgCampos.Rows(a).Cells(3).Value & "',"
+                    tmp_qry = tmp_qry & vRequerido.ToString & ")"
                     DC1.CommandText = tmp_qry
                     DC1.ExecuteNonQuery()
                 Else
                     Conexion.Open()
                     tmp_qry = "UPDATE TRB_TipoCampo SET Descripcion='" & dgCampos.Rows(a).Cells(1).Value & "',"
                     tmp_qry = tmp_qry & "Largo=" & dgCampos.Rows(a).Cells(2).Value & ","
-                    tmp_qry = tmp_qry & "Formato='" & dgCampos.Rows(a).Cells(3).Value & "' "
-                    tmp_qry = tmp_qry & "where TipoCampo=" & dgCampos.Rows(a).Cells(0).Value
+                    tmp_qry = tmp_qry & "Formato='" & dgCampos.Rows(a).Cells(3).Value & "', "
+                    tmp_qry = tmp_qry & "Requerido=" & vRequerido.ToString
+                    tmp_qry = tmp_qry & " where TipoCampo=" & dgCampos.Rows(a).Cells(0).Value
                     DC1.CommandText = tmp_qry
                     DC1.ExecuteNonQuery()
                 End If
 
-                Conexion.Close()
-            End If
+                    Conexion.Close()
+                End If
         Next
         Conexion.Close()
     End Sub
@@ -75,7 +81,7 @@
     Private Sub get_Campos()
         Conexion.Open()
         Dim dummy As String
-        dummy = "select TipoCampo,Descripcion,Largo,Formato from TRB_TipoCampo order by TipoCampo"
+        dummy = "select TipoCampo,Descripcion,Largo,Formato,Requerido from TRB_TipoCampo order by TipoCampo"
         Dim DA As New SqlClient.SqlDataAdapter(dummy, Conexion)
         Dim DS As New DataSet
         DA.Fill(DS)

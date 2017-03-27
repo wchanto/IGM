@@ -55,6 +55,7 @@ Partial Class frm_TRContrib
         Me.DPDefun = New System.Windows.Forms.DateTimePicker()
         Me.lbNaci = New System.Windows.Forms.Label()
         Me.lbDefu = New System.Windows.Forms.Label()
+        Me.btnFind = New System.Windows.Forms.Button()
         CType(Me.DGCampos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -247,7 +248,7 @@ Partial Class frm_TRContrib
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAdd, Me.btnEdit, Me.btnSave, Me.btnDel, Me.btnUndo})
-        Me.ToolStrip1.Location = New System.Drawing.Point(255, 9)
+        Me.ToolStrip1.Location = New System.Drawing.Point(279, 9)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(127, 25)
         Me.ToolStrip1.TabIndex = 128
@@ -354,11 +355,21 @@ Partial Class frm_TRContrib
         Me.lbDefu.TabIndex = 135
         Me.lbDefu.Text = "Fecha Defunción"
         '
+        'btnFind
+        '
+        Me.btnFind.Image = Global.IGM.My.Resources.Resources.google_custom_search2
+        Me.btnFind.Location = New System.Drawing.Point(249, 8)
+        Me.btnFind.Name = "btnFind"
+        Me.btnFind.Size = New System.Drawing.Size(26, 23)
+        Me.btnFind.TabIndex = 136
+        Me.btnFind.UseVisualStyleBackColor = True
+        '
         'frm_TRContrib
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(760, 556)
+        Me.Controls.Add(Me.btnFind)
         Me.Controls.Add(Me.lbDefu)
         Me.Controls.Add(Me.lbNaci)
         Me.Controls.Add(Me.DPDefun)
@@ -395,7 +406,6 @@ Partial Class frm_TRContrib
 
     End Sub
     Friend WithEvents lbID As System.Windows.Forms.Label
-    Friend WithEvents txIdentificacion As System.Windows.Forms.TextBox
     Friend WithEvents txNombreCompleto As System.Windows.Forms.TextBox
     Friend WithEvents lbNombre As System.Windows.Forms.Label
     Friend WithEvents txNombre As System.Windows.Forms.TextBox
@@ -424,4 +434,6 @@ Partial Class frm_TRContrib
     Friend WithEvents DPDefun As System.Windows.Forms.DateTimePicker
     Friend WithEvents lbNaci As System.Windows.Forms.Label
     Friend WithEvents lbDefu As System.Windows.Forms.Label
+    Friend WithEvents btnFind As System.Windows.Forms.Button
+    Public WithEvents txIdentificacion As System.Windows.Forms.TextBox
 End Class
